@@ -100,10 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	getInfo(buttons[0], hiddenInfos[0]);
-	getInfo(buttons[1], hiddenInfos[1]);
-	getInfo(buttons[2], hiddenInfos[2]);
-	getInfo(buttons[3], hiddenInfos[3]);
+	for(let i = 0; i < buttons.length; i++) {
+		getInfo(buttons[i], hiddenInfos[i]);
+	}
 
 	//рейтинг
 	const ratingInputs = document.querySelectorAll('input');
