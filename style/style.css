@@ -80,6 +80,7 @@ body {
 	border-bottom: 1px solid #ccc;
 	transition: color 0.3s ease-in-out;
 }
+
 .header__link:hover {
 	color: #952222;
 }
@@ -144,8 +145,8 @@ body {
 .hidden-info__descr,
 .rating {
 	margin-bottom: 8px;
-  text-align: center;
-  font-size: 16px;
+	text-align: center;
+	font-size: 16px;
 }
 
 .hidden-info__subtitle span,
@@ -162,6 +163,14 @@ body {
 	margin-right: 8px;
 }
 
+.rating-user {
+	margin-top: 10px;
+}
+
+.rating-user span {
+	font-weight: 700;
+}
+
 .footer {
 	display: flex;
 	justify-content: space-between;
@@ -170,7 +179,7 @@ body {
 	border-top: 1px solid #ccc;
 }
 
-.footer__copy{
+.footer__copy {
 	font-size: 12px;
 	color: #000;
 	transition: color 0.3s ease-in-out;
