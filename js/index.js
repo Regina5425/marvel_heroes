@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	renderCard();
 
-	//================== отображение карточек героев
 	function renderCard() {
 		let content = '';
 		for (let hero of heroes) {
@@ -90,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-	//================== отображение доп информации про героя
 	const buttons = document.querySelectorAll('.hero__btn'),
 		hiddenInfos = document.querySelectorAll('.hidden-info');
 
@@ -104,24 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		getInfo(buttons[i], hiddenInfos[i]);
 	}
 
-	//============= РЕЙТИНГ
 	const ratingInputs = document.querySelectorAll('input');
-
 	let userRatingArr = [];
 
-	//вывод рейтинга на страницу
 	if (localStorage.getItem('userRating') !== null) {
 		const forms = document.querySelectorAll('form');
 		const localRating = JSON.parse(localStorage.getItem('userRating'));
-		console.log(localRating);
 
-		// вызов функции установка рейтинга
 		for (let i = 0; i < buttons.length; i++) {
 			setRating(localRating[i], forms[i]);
 		}
 	}
 
-	// устанавливаем рейтинг пользователя
 	function setRating(rate, form) {
 
 		let ratingContent = '';
@@ -136,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		form.append(add);
 	}
 
-	//функция сохранения рейтинга
 	function getRating() {
 		ratingInputs.forEach(ratingInput => {
 			ratingInput.addEventListener('change', () => {
@@ -151,6 +142,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	// вызов функции сохранения рейтинга
 	getRating();
 });
